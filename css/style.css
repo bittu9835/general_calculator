@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(248, 231, 231);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.main{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border: 2px solid green;
+    background-color: rgb(203, 167, 237);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.screen{
+    width: 80%;
+    height: 2.5rem;
+    border: 1px solid black;
+    border-radius: 24px;
+    background-color: rgba(80, 238, 80, 0.772);
+    padding: 10px 0px 10px 20px;
+}
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+  #fnumber{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#snumber{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inpur-1{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-cover{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn{
+    width: 4em;
+    padding: 10px;
+    border-radius: 10px;  
+}
