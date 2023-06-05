@@ -14,11 +14,14 @@
     </div>
     <div class="main">
         <p><h1>CALCULATOR</h1></p>
-        <div id="result" class="screen"></div>
+        <div class="upper_screen">
+            <div id="result" class="screen1"></div>
+            <div id="mini-result" class="screen2"></div>
+        </div>
         <form>
             <div class="inpur-1">
-                <input type="text" id="fnumber" placeholder="Enter First Number">
-                <input type="text" id="snumber" placeholder="Enter Second Number"> 
+                <input type="number" id="fnumber" placeholder="Enter First Number">
+                <input type="number" id="snumber" placeholder="Enter Second Number"> 
             </div>
             <div class="btn-cover">
             <button type="button" class="btn" onclick="sum()">+</button>
