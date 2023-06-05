@@ -11,12 +11,13 @@ body{
 .container{
     width: 100%;
     height: 100vh;
+    display: flex;
 }
 
 .main{
     margin: auto;
     width: 50%;
-    height: 50%;
+    height: 70vh;
     border: 2px solid green;
     background-color: rgb(203, 167, 237);
     display: flex;
@@ -31,7 +32,10 @@ body{
     border: 1px solid black;
     border-radius: 24px;
     background-color: rgba(80, 238, 80, 0.772);
-    padding: 10px 0px 10px 20px;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: cursive;
 }
 form{
     width: 80%;
@@ -39,31 +43,55 @@ form{
     flex-direction: column;
 }
   #fnumber{
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: cursive;
 }
 
 #snumber{
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: cursive;
 }
 
 .inpur-1{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .btn-cover{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .btn{
-    width: 4em;
+   min-width: 7rem;
     padding: 10px;
-    border-radius: 10px;  
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 2em;  
 }
+.clre{
+    margin: 5px 0px 5px 0px;
+}
+
+@media screen and (max-width: 550px) {
+    .main{
+        background-color: rgb(248, 50, 50);
+        width: 80%;
+        height: auto;
+    }
+}
+
