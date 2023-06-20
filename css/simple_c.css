@@ -8,11 +8,15 @@ body{
     background-color: rgb(248, 231, 231);
 }
 
+.container-flud{
+    height: 100vh;
+}
+
 .container{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .nav{
@@ -50,7 +54,11 @@ body{
   padding-right: 10px;
   overflow: hidden;
   direction: rtl;
+  display: flex;
 }
+/* .arr-result{
+    display: block;
+} */
 
 .upper_screen{
     width: 80%;
@@ -120,6 +128,55 @@ form{
 .main h1{
     color: brown;
     margin-bottom: 30px; 
+}
+
+#card{
+    background-color: rgb(216, 212, 212);
+    display: none;
+    width: 25%;
+    max-height: 100vh;
+    padding: 10px;
+    overflow: auto;
+    direction: rtl;
+    /* position: absolute; */
+    /* border: 2px solid black; */
+}
+
+.bach{
+    display: flex;
+    justify-content:space-between;
+}
+
+.his{
+    color: red;
+}
+
+ 
+.table table,th,tr,td {
+     padding: 5px;
+     text-align: center;
+     
+}
+
+.size1{
+    width: 25%;
+}
+
+.size2{
+    width: 12%;
+}
+
+.bi{
+    float: left;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.div1{
+    width: 95%;
+}
+.div2{
+    width: 5%;
 }
 
 @media screen and (max-width: 750px) {
