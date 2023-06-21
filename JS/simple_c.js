@@ -1,43 +1,30 @@
 let firstnum = document.getElementById("fnumber");
+let operators = document.querySelectorAll('.btn');
 let secondnum = document.getElementById("snumber");
 let result;
 let clear = document.getElementsByClassName("screen");
+
 const ary = [];
+
 const sum = () => {
   result = parseInt(firstnum.value) + parseInt(secondnum.value);
   document.getElementById("result").innerHTML = result;
   let mresulr = firstnum.value + " + " + secondnum.value + " = " + result;
-  let number1 = firstnum.value;
-  let number2 = secondnum.value;
-  let historyR = result;
-
-  const obj = {
-    result: historyR,
-    number1: number1,
-    number2: number2
+  let historyresult = firstnum.value + " + " + secondnum.value;
+  document.getElementById("mini-result").innerHTML = mresulr
+  const historyobj = {
+    result: result,
+    argument: historyresult
   }
-
-  ary.push(obj);
+  ary.push(historyobj);
 
   let form = ` `;
-
   for (let i = 0; i < ary.length; i++) {
-    form =
-      form +
-      `
-      <tr>
-          <td>${ary[i].number1}</td>
-          <td>+</td>
-          <td>${ary[i].number2}</td>
-          <td>=</td>
-          <td>${ary[i].result}</td>
-      </tr>`;
+    form = form +
+      `<div class="out1">${ary[i].result}</div>
+   <div class="out2">${ary[i].argument}</div>`
   }
-
   document.getElementById("table").innerHTML = form;
-  console.log(form)
-  document.getElementById("mini-result").innerHTML = mresulr
-
   firstnum.value = "";
   secondnum.value = "";
 };
@@ -46,8 +33,22 @@ const sum = () => {
 const sub = () => {
   result = parseInt(firstnum.value) - parseInt(secondnum.value);
   document.getElementById("result").innerHTML = result;
-  document.getElementById("mini-result").innerHTML =
-    firstnum.value + " + " + secondnum.value + " = " + result;
+  let mresulr = firstnum.value + " - " + secondnum.value + " = " + result;
+  let historyresult = firstnum.value + " - " + secondnum.value;
+  document.getElementById("mini-result").innerHTML = mresulr
+  const historyobj = {
+    result: result,
+    argument: historyresult
+  }
+  ary.push(historyobj);
+
+  let form = ` `;
+  for (let i = 0; i < ary.length; i++) {
+    form = form +
+      `<div class="out1">${ary[i].result}</div>
+   <div class="out2">${ary[i].argument}</div>`
+  }
+  document.getElementById("table").innerHTML = form;
   firstnum.value = "";
   secondnum.value = "";
 };
@@ -55,8 +56,22 @@ const sub = () => {
 const mul = () => {
   result = parseInt(firstnum.value) * parseInt(secondnum.value);
   document.getElementById("result").innerHTML = result;
-  document.getElementById("mini-result").innerHTML =
-    firstnum.value + " + " + secondnum.value + " = " + result;
+  let mresulr = firstnum.value + " * " + secondnum.value + " = " + result;
+  let historyresult = firstnum.value + " * " + secondnum.value;
+  document.getElementById("mini-result").innerHTML = mresulr
+  const historyobj = {
+    result: result,
+    argument: historyresult
+  }
+  ary.push(historyobj);
+
+  let form = ` `;
+  for (let i = 0; i < ary.length; i++) {
+    form = form +
+      `<div class="out1">${ary[i].result}</div>
+   <div class="out2">${ary[i].argument}</div>`
+  }
+  document.getElementById("table").innerHTML = form;
   firstnum.value = "";
   secondnum.value = "";
 };
@@ -64,14 +79,31 @@ const mul = () => {
 const div = () => {
   result = parseInt(firstnum.value) / parseInt(secondnum.value);
   document.getElementById("result").innerHTML = result;
-  document.getElementById("mini-result").innerHTML =
-    firstnum.value + " + " + secondnum.value + " = " + result;
+  let mresulr = firstnum.value + " / " + secondnum.value + " = " + result;
+  let historyresult = firstnum.value + " / " + secondnum.value;
+  document.getElementById("mini-result").innerHTML = mresulr
+  const historyobj = {
+    result: result,
+    argument: historyresult
+  }
+  ary.push(historyobj);
+
+  let form = ` `;
+  for (let i = 0; i < ary.length; i++) {
+    form = form +
+      `<div class="out1">${ary[i].result}</div>
+   <div class="out2">${ary[i].argument}</div>`
+  }
+  document.getElementById("table").innerHTML = form;
   firstnum.value = "";
   secondnum.value = "";
 };
 
+
+
 const clr = () => {
   document.getElementById("result").innerHTML = "";
+  document.getElementById("mini-result").innerHTML = "";
 };
 
 const history = () => {
@@ -80,5 +112,10 @@ const history = () => {
 
 const historyback = () => {
   document.getElementById("card").style.display = "none";
+}
+
+const historydelete = () =>{
+  document.getElementById("table").innerHTML ='';
+
 }
 

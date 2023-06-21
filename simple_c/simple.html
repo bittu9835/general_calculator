@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -20,10 +21,11 @@
         <div id="card">
           <div class="bach">
             <i class="bi bi-backspace-reverse" onclick="historyback()"></i>
+            <i class="bi bi-x-circle" onclick="historydelete()"></i>
             <h2 class="his">History</h2>
           </div>
-
-          <table class="table">
+          <div id="table"></div>
+          <!-- <table class="table">
             <thead>
               <tr>
                 <th class="size1"></th>
@@ -34,7 +36,7 @@
               </tr>
             </thead>
             <tbody id="table"></tbody>
-          </table>
+          </table> -->
         </div>
         <div class="main">
           <h1>CALCULATOR</h1>
